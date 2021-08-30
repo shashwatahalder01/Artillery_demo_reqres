@@ -23,15 +23,15 @@ Uses a sample API defined here:
 
 ### Check Single Endpoint
 
-artillery run tests/filename
+* artillery run tests/filename
 
 ### How to generate report as a json file
 
-artillery run --output <filename>.json tests/<test_fileName>.yml
+* artillery run --output <filename>.json tests/<test_fileName>.yml
 
 ### How to create a html report
 
-artillery report --output <htmlFileName>.html <NameOfJsonReportfile>.json
+* artillery report --output <htmlFileName>.html <NameOfJsonReportfile>.json
 	
 ### *** For generate html report, before must have to generate json reponse ***	
 
