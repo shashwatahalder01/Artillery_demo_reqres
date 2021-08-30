@@ -12,7 +12,6 @@ scenarios:
             url: "/api/login"
             json:                
                   email: "eve.holt@reqres.in"
-                  password: "cityslicka"
             expect:
                - statusCode: 200
                 

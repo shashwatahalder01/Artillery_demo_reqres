@@ -8,11 +8,11 @@ config:
 scenarios:
     - name: "Register Successful"
       flow:
-        - post:
-            url: "/api/login"
+        - put:
+            url: "/api/users/2"
             json:                
-                  email: "eve.holt@reqres.in"
-                  password: "cityslicka"
+                  name: "morpheus"
+                  job: "zion resident"
             expect:
                - statusCode: 200
                 

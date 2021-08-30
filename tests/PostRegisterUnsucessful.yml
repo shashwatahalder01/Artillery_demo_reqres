@@ -9,10 +9,9 @@ scenarios:
     - name: "Register Successful"
       flow:
         - post:
-            url: "/api/login"
+            url: "/api/register"
             json:                
                   email: "eve.holt@reqres.in"
-                  password: "cityslicka"
             expect:
-               - statusCode: 200
+               - statusCode: 400
                 

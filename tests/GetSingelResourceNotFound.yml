@@ -1,0 +1,14 @@
+config:
+  target: 'https://reqres.in'
+  phases:
+    - duration: 30
+      arrivalRate: 5
+      maxVusers: 30
+scenarios:
+  - name: 'get list resource'
+  - flow:
+    - get:
+        url: "/api/unknown/23"
+      expect:
+           - statusCode: 404
+                

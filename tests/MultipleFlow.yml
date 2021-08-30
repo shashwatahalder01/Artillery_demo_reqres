@@ -1,7 +1,7 @@
 config:
   target: 'https://reqres.in'
   phases:
-    - duration: 30
+    - duration: 40
       arrivalRate: 5
       maxVusers: 30
 scenarios:
@@ -29,5 +29,16 @@ scenarios:
       url: "/api/users/2"
     expect:
          - statusCode: 200
-                
+
+  - flow:
+  - get:
+      url: "/api/unknown/23"
+    expect:
+         - statusCode: 404
+  
+  - flow:
+  - get:
+      url: "/api/users/23"
+    expect:
+         - statusCode: 404
                 

@@ -14,5 +14,5 @@ scenarios:
                   email: "eve.holt@reqres.in"
                   password: "pistol"
             expect:
-               - statusCode: 201
+               - statusCode: 200
                 

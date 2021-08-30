@@ -22,5 +22,5 @@ scenarios:
                   name: "{{name}}"
                   job: "{{pass}}"
             expect:
-               - statusCode: 201
+               - statusCode: 200
                 
