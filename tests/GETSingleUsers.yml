@@ -1,0 +1,14 @@
+config:
+  target: 'https://reqres.in'
+  phases:
+    - duration: 30
+      arrivalRate: 5
+      maxVusers: 30
+scenarios:
+  - name: "Single users"
+  - flow:
+    - get:
+        url: "/api/users/2"
+      expect:
+           - statusCode: 200
+                

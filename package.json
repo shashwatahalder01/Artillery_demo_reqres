@@ -1,0 +1,19 @@
+{
+  "name": "demo-load-test-artillery-master",
+  "version": "1.0.0",
+  "description": "Uses a sample API defined here:",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^2.0.0-dev9",
+    "artillery-plugin-expect": "^1.5.0"
+  }
+}

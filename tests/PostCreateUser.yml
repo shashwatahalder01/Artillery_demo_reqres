@@ -1,0 +1,26 @@
+config:
+    target: "https://reqres.in"
+    phases:
+      - duration: 30
+        arrivalCount: 5
+        maxVusers: 30
+    payload:
+      path: "../resources/user.csv"
+
+      fields:
+        - "name"
+        - "passs"
+      order: sequence
+      skipHeader: true
+scenarios:
+    - name: "Create user"
+      flow:
+        - post:
+            url: "/api/users"
+            # Define parameters as {{{xxx}} when posting
+            json:                
+                  name: "{{name}}"
+                  job: "{{pass}}"
+            expect:
+               - statusCode: 201
+                

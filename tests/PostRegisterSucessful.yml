@@ -1,0 +1,18 @@
+config:
+    target: "https://reqres.in"
+    phases:
+      - duration: 30
+        arrivalCount: 5
+        maxVusers: 30
+
+scenarios:
+    - name: "Register Successful"
+      flow:
+        - post:
+            url: "/api/register"
+            json:                
+                  email: "eve.holt@reqres.in"
+                  password: "pistol"
+            expect:
+               - statusCode: 201
+                

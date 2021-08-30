@@ -1,0 +1,33 @@
+config:
+  target: 'https://reqres.in'
+  phases:
+    - duration: 30
+      arrivalRate: 5
+      maxVusers: 30
+scenarios:
+
+  - flow:
+    - get:
+        url: "/api/unknown"
+      expect:
+           - statusCode: 200
+
+  - flow:
+  - get:
+      url: "/api/users?page=2"
+    expect:
+         - statusCode: 200
+
+  - flow:
+  - get:
+      url: "/api/unknown/2"
+    expect:
+         - statusCode: 200
+
+  - flow:
+  - get:
+      url: "/api/users/2"
+    expect:
+         - statusCode: 200
+                
+                
